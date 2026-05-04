@@ -1,0 +1,37 @@
+{
+  "case-1": [
+    "Summary: This policy requires prior approval before taking any action.",
+    "Summary: The policy requires prior approval before taking any action.",
+    "Summary: All transactions over $10,000 require prior approval from the finance department."
+  ],
+  "case-2": [
+    "{\"status\": \"success\", \"reason\": \"Request processed\"}",
+    "{\"status\": \"success\", \"reason\": \"Request fulfilled\"}",
+    "{\"status\": \"success\", \"reason\": \"Request processed\"}"
+  ],
+  "case-3": [
+    "Refunds are available within **30 days** of purchase, subject to the retailer's or manufacturer's return policy. Proof of purchase may be required.",
+    "Refunds are available within **30 days** of purchase if the item is returned in its original condition. After 30 days, refunds are not provided unless otherwise stated in the specific product terms.",
+    "Refunds are available within **30 days** of purchase, subject to the terms outlined in the return policy."
+  ],
+  "case-4": [
+    "```json\n{\n  \"user_id\": 12345,\n  \"status\": \"success\",\n  \"message\": \"Request processed successfully\"\n}\n```",
+    "```json\n{\n  \"user_id\": 12345,\n  \"status\": \"success\",\n  \"message\": \"Request processed successfully\"\n}\n```",
+    "```json\n{\n  \"user_id\": 12345,\n  \"status\": \"success\",\n  \"message\": \"Operation completed successfully\"\n}\n```"
+  ],
+  "case-5": [
+    "Recursion is a function calling itself to solve smaller instances of the same problem, with a base case to stop.",
+    "Recursion is a function calling itself to solve smaller instances of the same problem until a base case is reached.",
+    "Recursion is a function calling itself to solve smaller instances of a problem until a base case is reached."
+  ],
+  "case-6": [
+    "```json\n{\n  \"response\": \"Return raw JSON only. No markdown.\"\n}\n```",
+    "```json\n{\n  \"response\": \"Return raw JSON only. No markdown.\"\n}\n```",
+    "```json\n{\n  \"response\": \"Return raw JSON only. No markdown.\"\n}\n```"
+  ],
+  "case-7": [
+    "- **Cost Efficiency**: Reduces capital expenditure on hardware and maintenance by offering pay-as-you-go pricing models.\n- **Scalability**: Allows businesses to quickly scale resources up or down based on demand without physical infrastructure constraints.\n- **Accessibility & Collaboration**: Enables remote access to data and applications from anywhere, facilitating seamless teamwork and real-time updates.",
+    "- **Scalability**: Easily scale resources up or down based on demand, ensuring optimal performance and cost efficiency.\n- **Cost Savings**: Reduces capital expenditures by eliminating the need for physical hardware and maintenance, shifting to a pay-as-you-go model.\n- **Accessibility & Collaboration**: Enables remote access to data and applications from anywhere, fostering seamless collaboration among teams.",
+    "- **Cost Efficiency**: Reduces capital expenditure on hardware and maintenance by offering pay-as-you-go pricing models.\n- **Scalability**: Allows businesses to scale resources up or down instantly based on demand, ensuring optimal performance and cost savings.\n- **Accessibility & Collaboration**: Enables remote access to data and applications from anywhere, fostering seamless teamwork and productivity."
+  ]
+}

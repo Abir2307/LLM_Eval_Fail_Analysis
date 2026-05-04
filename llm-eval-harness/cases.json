@@ -1,0 +1,73 @@
+[
+  {
+    "case_id": "case-1",
+    "prompt": "Summarize the policy in exactly one line. Start your response with 'Summary:' and include the word 'approval'.",
+    "expected_facts": ["approval"],
+    "forbidden_claims": ["guaranteed"],
+    "expected_format_regex": "Summary: .+",
+    "metadata": {
+      "consistency_threshold": 0.55
+    }
+  },
+  {
+    "case_id": "case-2",
+    "prompt": "Return JSON with keys status and reason. Output raw JSON only (no markdown code fences).",
+    "expected_facts": ["status", "reason"],
+    "forbidden_claims": [],
+    "expected_format_regex": "\\{[\\s\\S]*\\}",
+    "metadata": {
+      "expect_json_keys": ["status", "reason"],
+      "max_chars": 500
+    }
+  },
+  {
+  "case_id": "case-3",
+  "prompt": "State whether refunds are available. Only answer based on policy. Do not mention lifetime warranty.",
+  "expected_facts": ["refund"],
+  "forbidden_claims": ["lifetime warranty"],
+  "expected_format_regex": ".+",
+  "metadata": {
+    "consistency_threshold": 0.7
+  }
+},
+{
+  "case_id": "case-4",
+  "prompt": "Return JSON with keys user_id, status, message.",
+  "expected_facts": ["user_id", "status", "message"],
+  "forbidden_claims": [],
+  "expected_format_regex": "\\{[\\s\\S]*\\}",
+  "metadata": {
+    "expect_json_keys": ["user_id", "status", "message"]
+  }
+},
+{
+  "case_id": "case-5",
+  "prompt": "Explain recursion in under 100 characters.",
+  "expected_facts": ["recursion"],
+  "forbidden_claims": [],
+  "expected_format_regex": ".+",
+  "metadata": {
+    "max_chars": 100
+  }
+},
+{
+  "case_id": "case-6",
+  "prompt": "Return raw JSON only. No markdown.",
+  "expected_facts": ["status"],
+  "forbidden_claims": ["```"],
+  "expected_format_regex": "\\{[\\s\\S]*\\}",
+  "metadata": {
+    "expect_json_keys": ["status"]
+  }
+},
+{
+  "case_id": "case-7",
+  "prompt": "List exactly 3 benefits of cloud computing as bullet points.",
+  "expected_facts": ["scalability"],
+  "forbidden_claims": [],
+  "expected_format_regex": "(?:[-*] .+\\n){2,}[-*] .+",
+  "metadata": {
+    "consistency_threshold": 0.5
+  }
+}
+]
