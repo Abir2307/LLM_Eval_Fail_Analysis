@@ -7,25 +7,31 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
-
     strategy:
       matrix:
         python-version: ["3.11", "3.12"]
 
-    steps:
-      - uses: actions/checkout@v4
+    defaults:
+      run:
+        working-directory: llm-eval-harness 
 
-      - uses: actions/setup-python@v5
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
         with:
           python-version: ${{ matrix.python-version }}
 
-      - name: Install dependencies
+      - name: Install package
         run: |
           python -m pip install --upgrade pip
+          pip install -e .
+
+      - name: Install dev deps
+        run: |
           pip install -e .[dev]
 
-      - name: Run pytest
-        run: pytest
-
-      - name: CLI smoke test
-        run: llm-eval --help
+      - name: Run tests
+        run: pytest -v
